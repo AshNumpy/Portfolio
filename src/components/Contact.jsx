@@ -6,7 +6,7 @@ import './Contact.css';
 import TextMorphism from './TextMorphism';
 
 const Contact = () => {
-    const keywords = ["DATA ENGINEERING", "BUSINESS INTELLIGENCE", "QLIK SENSE", "SQL SERVER", "PYTHON", "POWER BI", "MACHINE LEARNING", "DATA ARCHITECTURE"];
+    const keywords = ["DATA ENGINEERING", "BUSINESS INTELLIGENCE", "QLIK SENSE", "SQL SERVER", "PYTHON", "MACHINE LEARNING", "DATA ARCHITECTURE"];
 
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -49,7 +49,7 @@ const Contact = () => {
 
                 {/* Text Morphism Effect replacing Marquee */}
                 <div className="footer-morphism-wrapper">
-                    <TextMorphism texts={keywords} />
+                    <TextMorphism texts={keywords} morphTime={1.0} cooldownTime={1.0} />
                 </div>
 
                 <div className="footer-bottom-flex">
