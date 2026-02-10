@@ -1,0 +1,128 @@
+.about-section {
+    padding: 10rem 0;
+    background-color: var(--bg-100);
+}
+
+.about-container-v5 {
+    display: flex;
+    flex-direction: column;
+}
+
+.about-flex-layout-v6 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+}
+
+.about-info-group-v6 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+    /* Increased gap between title and text as requested */
+}
+
+.about-title-uppercase-v6 {
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--primary-100);
+    font-family: var(--font-header);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    width: fit-content;
+}
+
+.about-text-v6 {
+    /* Max width removed as requested to allow full container expansion */
+    margin-top: -0.5rem;
+}
+
+.summary-p-v6 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--text-200);
+    margin: 0;
+}
+
+.about-circle-wrapper-v6 {
+    flex-shrink: 0;
+    width: 350px;
+    height: 350px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rotating-text-v6 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: spin 20s linear infinite;
+    z-index: 3;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.dashed-inner-circle {
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    border: 2px dashed rgba(209, 230, 79, 0.4);
+    border-radius: 50%;
+    z-index: 2;
+    animation: spin-slow 40s linear infinite reverse;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cv-btn-v3 {
+    width: 110px;
+    height: 110px;
+    background: var(--primary-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    color: var(--bg-100);
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+@media (max-width: 1024px) {
+    .about-flex-layout-v6 {
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+    }
+
+    .about-title-uppercase-v6 {
+        font-size: 5rem;
+        width: auto;
+    }
+
+    .about-text-v6 {
+        max-width: 100%;
+    }
+}

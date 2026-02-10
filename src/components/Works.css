@@ -1,0 +1,118 @@
+.works-section {
+    padding: 10rem 0;
+    background-color: var(--bg-100);
+}
+
+.works-title-uppercase {
+    font-size: 8rem;
+    line-height: 1;
+    color: var(--primary-100);
+    margin-bottom: 4rem;
+    text-align: right;
+    font-family: var(--font-header);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.works-list-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.work-row-v2 {
+    display: flex;
+    align-items: center;
+    padding: 2.5rem 2rem;
+    border-top: 1px solid var(--bg-300);
+    gap: 4rem;
+    transition: all 0.4s ease;
+    border-radius: 20px;
+}
+
+.work-row-v2:last-child {
+    border-bottom: 1px solid var(--bg-300);
+}
+
+.work-year-v2 {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    color: var(--text-200);
+    min-width: 100px;
+}
+
+.work-info-v2 {
+    flex: 1;
+}
+
+.work-name-v2 {
+    font-size: 2rem;
+    color: var(--text-100);
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+.work-tag-v2 {
+    color: var(--text-200);
+    opacity: 0.7;
+}
+
+.work-btn-v2 {
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--text-100);
+    border-radius: 30px;
+    color: var(--text-100);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.work-btn-v2:hover .arrow-icon {
+    transform: translateX(8px);
+}
+
+.work-row-v2:hover {
+    background-color: var(--primary-100);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin: 0.5rem -2rem;
+    border-top-color: transparent;
+}
+
+.work-row-v2:hover .work-name-v2,
+.work-row-v2:hover .work-year-v2,
+.work-row-v2:hover .work-tag-v2,
+.work-row-v2:hover .work-btn-v2 {
+    color: var(--bg-100);
+    border-color: var(--bg-100);
+}
+
+.work-row-v2:hover .work-btn-v2:hover {
+    background: var(--bg-100);
+    color: var(--primary-100);
+}
+
+@media (max-width: 768px) {
+    .works-title-uppercase {
+        font-size: 4rem;
+    }
+
+    .work-row-v2 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .work-row-v2:hover {
+        margin: 0.5rem 0;
+        padding: 2rem;
+    }
+}

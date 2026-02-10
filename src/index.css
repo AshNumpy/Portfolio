@@ -1,0 +1,116 @@
+:root {
+    /* Color Palette - Reference Inspired */
+    --primary-100: #D1E64F;
+    /* Neon/Lime Green */
+    --primary-200: #b8cc45;
+    --bg-100: #1A2416;
+    /* Dark Forest/Green Black */
+    --bg-200: #252e21;
+    --bg-300: #343d31;
+    --text-100: #FFFFFF;
+    --text-200: #d0d0d0;
+    --accent-100: #D1E64F;
+    /* Matching primary for this theme */
+
+    /* Typography */
+    --font-main: 'Inter', sans-serif;
+    --font-header: 'Oswald', sans-serif;
+    /* Big bold headers */
+
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --spacing-xl: 8rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.4s ease;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-100);
+    color: var(--text-200);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color var(--transition-fast);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-sm);
+}
+
+.text-primary {
+    color: var(--primary-100);
+}
+
+.text-accent {
+    color: var(--accent-100);
+}
+
+.bg-primary {
+    background-color: var(--primary-100);
+    color: var(--bg-100);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-header);
+    line-height: 1.1;
+    color: var(--text-100);
+    text-transform: uppercase;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
