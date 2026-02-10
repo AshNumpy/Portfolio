@@ -75,10 +75,10 @@
 }
 
 .nav-link-pill:hover {
-    background-color: var(--primary-100);
-    /* Neon Lime Green */
-    color: var(--bg-100);
-    box-shadow: 0 4px 15px rgba(209, 230, 79, 0.3);
+    background-color: var(--bg-200);
+    color: var(--primary-100);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* On scrolled state, links might need different colors if background is light */

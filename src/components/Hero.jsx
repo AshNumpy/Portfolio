@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import { cvData } from '../data/cvData';
 import { FaLinkedin, FaGithub, FaMedium, FaArrowDown } from 'react-icons/fa';
 import './Hero.css';
@@ -14,7 +14,7 @@ const Hero = () => {
 
                 {/* Giant Background Text - 2 Rows */}
                 <div className="giant-bg-overlay-2rows-v4">
-                    <span>BI • DATA • ANALYTICS • INSIGHTS • ARCHITECTURE • VISUALIZATION • STRATEGY • POWER BI • SQL • PYTHON • ETL • DASHBOARDS • BIG DATA • MACHINE LEARNING • DATA WAREHOUSING • CLOUD • AUTOMATION</span>
+                    <span>BI • DATA • ANALYTICS • INSIGHTS • ARCHITECTURE • VISUALIZATION • STRATEGY • SQL • PYTHON • ETL • DASHBOARDS • BIG DATA • MACHINE LEARNING • DATA WAREHOUSING • CLOUD • AUTOMATION • QLIK SENSE • CONSULTING</span>
                 </div>
 
                 <div className="hero-content-inner-v5">

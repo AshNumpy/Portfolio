@@ -93,8 +93,63 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    max-width: 380px;
+    max-width: 420px;
     transform: translate(90px, -340px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 0 8px 4px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+}
+
+.hero-desc-group-v6::before,
+.hero-cta-box-v6::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    pointer-events: none;
+}
+
+.hero-desc-group-v6::after,
+.hero-cta-box-v6::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.3),
+            transparent,
+            rgba(255, 255, 255, 0.3));
+    pointer-events: none;
+}
+
+.hero-desc-group-v6:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(90px, -350px) scale(1.02);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 10px 5px rgba(255, 255, 255, 0.2);
 }
 
 .hero-small-desc-v3 {
@@ -128,11 +183,36 @@
 }
 
 .hero-cta-box-v6 {
-    max-width: 320px;
+    max-width: 360px;
     text-align: right;
     margin-right: 15%;
     margin-bottom: -10rem;
     transform: translate(200px, -300px);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(2.5px);
+    -webkit-backdrop-filter: blur(2.5px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+        inset 0 0 8px 4px rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10;
+}
+
+.hero-cta-box-v6:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translate(200px, -310px) scale(1.02);
+    box-shadow:
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 0 10px 5px rgba(255, 255, 255, 0.2);
 }
 
 .hero-cta-text-v3 {
