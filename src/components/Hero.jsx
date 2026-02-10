@@ -3,8 +3,6 @@ import { cvData } from '../data/cvData';
 import { FaLinkedin, FaGithub, FaMedium, FaArrowDown } from 'react-icons/fa';
 import './Hero.css';
 
-import KeycapButton from './KeycapButton';
-
 const Hero = () => {
     return (
         <section className="hero-section">
@@ -20,11 +18,6 @@ const Hero = () => {
                 </div>
 
                 <div className="hero-content-inner-v5">
-                    {/* Centered Keycap Button */}
-                    <div className="keycap-center-wrapper">
-                        <KeycapButton />
-                    </div>
-
                     <div className="hero-mid-elements-v5">
                         {/* Relocated and shifted: Total 340px up (170+170), 90px right */}
                         <div className="hero-desc-group-v6">
