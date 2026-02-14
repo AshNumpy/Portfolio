@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { cvData } from '../data/cvData';
 import { FaArrowRight } from 'react-icons/fa';
 import './Works.css';
@@ -22,6 +23,13 @@ const Works = () => {
                             </a>
                         </div>
                     ))}
+
+                    {/* View All Projects Button */}
+                    <div className="view-all-projects-row">
+                        <Link to="/works" className="view-all-btn">
+                            VIEW ALL PROJECTS <span className="arrow-icon"><FaArrowRight /></span>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>
