@@ -5,6 +5,9 @@ import { FaGithub, FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa';
 import { sortedProjectsData } from '../data/projectsData';
 import './WorksPage.css';
 
+// Dynamically import all project thumbnails
+const projectImages = import.meta.glob('../assets/project-thumbnails/*.jpg', { eager: true, import: 'default' });
+
 const WorksPage = () => {
     // Scroll to top when component mounts
     useEffect(() => {
@@ -16,6 +19,20 @@ const WorksPage = () => {
         const date = new Date(dateString);
         const options = { year: 'numeric', month: 'short' };
         return date.toLocaleDateString('en-US', options);
+    };
+
+    // Get project image
+    const getProjectImage = (project) => {
+        if (!project.thumbnail) return 'none';
+
+        const imagePath = `../assets/project-thumbnails/${project.thumbnail}`;
+        if (projectImages[imagePath]) {
+            return `url("${projectImages[imagePath]}")`;
+        }
+
+        // Try fallback if filename doesn't match exactly
+        console.warn(`Image not found: ${imagePath}`);
+        return 'none';
     };
 
     return (
@@ -37,7 +54,7 @@ const WorksPage = () => {
             <div className="container works-page-content">
                 <div className="projects-grid">
                     {sortedProjectsData.map((project, index) => (
-                        <div key={index} className="project-card">
+                        <div key={index} className="project-card" style={{ backgroundImage: getProjectImage(project) }}>
                             <div className="project-card-header">
                                 <span className="project-category">{project.category}</span>
                                 <span className="project-date">{formatDate(project.date)}</span>
