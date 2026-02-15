@@ -117,8 +117,14 @@
     font-size: 0.95rem;
 }
 
-.achievement-link {
+.achievement-actions {
     margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.achievement-link {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -130,6 +136,25 @@
 
 .achievement-link:hover {
     gap: 0.8rem;
+}
+
+.presentation-link {
+    background: transparent;
+    color: var(--primary-100);
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    border: 1px solid var(--primary-100);
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.presentation-link:hover {
+    background: var(--primary-100);
+    color: var(--bg-100);
+    opacity: 1;
+    gap: 0.5rem;
+    /* override gap change from generic link if needed, or keep consistent */
 }
 
 /* Certificates */

@@ -46,14 +46,26 @@ const GalleryPage = () => {
                                 <div className="achievement-details">
                                     <span>Top {item.rank} of {item.competitors} participants</span>
                                 </div>
-                                <a
-                                    href={item.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="achievement-link"
-                                >
-                                    View details <FaExternalLinkAlt />
-                                </a>
+                                <div className="achievement-actions">
+                                    <a
+                                        href={item.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="achievement-link"
+                                    >
+                                        View details <FaExternalLinkAlt />
+                                    </a>
+                                    {item.presentation && (
+                                        <a
+                                            href={item.presentation}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="achievement-link presentation-link"
+                                        >
+                                            Presentation <FaExternalLinkAlt />
+                                        </a>
+                                    )}
+                                </div>
                             </div>
                         ))}
                     </div>

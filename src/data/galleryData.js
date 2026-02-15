@@ -6,7 +6,8 @@ export const galleryData = {
             date: "September 2023",
             link: "https://github.com/AshNumpy/BTK-Datathon-2023",
             rank: 5,
-            competitors: 359
+            competitors: 359,
+            presentation: "https://gamma.app/docs/Original-BTK-ah8u9n3rgb5h95c?mode=doc"
         },
         {
             title: "KPMG Data & Analytics Challenge",
