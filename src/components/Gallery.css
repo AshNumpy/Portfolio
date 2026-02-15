@@ -43,6 +43,16 @@
     transform: translateY(-5px);
 }
 
+.view-all-gallery-card {
+    text-decoration: none;
+    border: 1px dashed var(--primary-100);
+    background: rgba(184, 255, 54, 0.03);
+}
+
+.view-all-gallery-card:hover {
+    background: rgba(184, 255, 54, 0.1);
+}
+
 .item-icon {
     font-size: 2rem;
     color: var(--primary-100);
