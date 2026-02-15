@@ -22,11 +22,18 @@ const Navbar = () => {
     }, [isHomePage]);
 
     const navLinks = [
-        { name: "About", href: "/#about" },
-        { name: "Works", href: "/#works" },
-        { name: "Gallery", href: "/#gallery" },
-        { name: "Contact", href: "/#contact" },
+        { name: "About", href: "/#about", type: "hash" },
+        { name: "Works", href: "/works", type: "page" },
+        { name: "Gallery", href: "/gallery", type: "page" },
+        { name: "Contact", href: "/#contact", type: "hash" },
     ];
+
+    const isActive = (link) => {
+        if (link.type === "page") {
+            return location.pathname === link.href;
+        }
+        return false; // For hash links, strictly speaking, they are only active if we are on home + matching hash, or we can leave them inactive.
+    };
 
     const scrollToTop = () => {
         if (isHomePage) {
@@ -53,18 +60,21 @@ const Navbar = () => {
                         <a
                             key={index}
                             href={link.href}
-                            className="nav-link-pill"
+                            className={`nav-link-pill ${isActive(link) ? 'active' : ''}`}
                             onClick={(e) => {
-                                if (isHomePage) {
-                                    e.preventDefault();
-                                    const element = document.querySelector(link.href.substring(1));
-                                    if (element) {
-                                        element.scrollIntoView({ behavior: 'smooth' });
-                                        // Update URL without jump
-                                        window.history.pushState(null, '', link.href);
+                                if (link.type === 'hash') {
+                                    // Logic for hash links (About, Contact)
+                                    if (isHomePage) {
+                                        e.preventDefault();
+                                        const element = document.querySelector(link.href.substring(1));
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                            window.history.pushState(null, '', link.href);
+                                        }
                                     }
+                                    // If not home page, default behavior (navigate to /#section) works fine
                                 }
-                                // If not home page, let the default behavior happen (navigate to /#section)
+                                // For page links (Works, Gallery), default behavior (navigate to href) is correct.
                             }}
                         >
                             {link.name}
