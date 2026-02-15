@@ -74,7 +74,8 @@
     transition: all 0.3s ease;
 }
 
-.nav-link-pill:hover {
+.nav-link-pill:hover,
+.nav-link-pill.active {
     background-color: var(--bg-200);
     color: var(--primary-100);
     border-radius: 12px;
@@ -86,7 +87,8 @@
     color: var(--bg-100);
 }
 
-.navbar.scrolled .nav-link-pill:hover {
+.navbar.scrolled .nav-link-pill:hover,
+.navbar.scrolled .nav-link-pill.active {
     background-color: var(--bg-100);
     color: var(--primary-100);
 }
