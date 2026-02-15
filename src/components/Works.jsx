@@ -27,7 +27,8 @@ const Works = () => {
                     {/* View All Projects Button */}
                     <div className="view-all-projects-row">
                         <Link to="/works" className="view-all-btn">
-                            VIEW ALL PROJECTS <span className="arrow-icon"><FaArrowRight /></span>
+                            <span>VIEW ALL PROJECTS</span>
+                            <span className="arrow-icon"><FaArrowRight /></span>
                         </Link>
                     </div>
                 </div>
