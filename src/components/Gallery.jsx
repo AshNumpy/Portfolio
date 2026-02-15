@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { cvData } from '../data/cvData';
-import { FaTrophy } from 'react-icons/fa';
+import { FaTrophy, FaArrowRight } from 'react-icons/fa';
 import './Gallery.css';
 
 const Gallery = () => {
@@ -24,6 +25,16 @@ const Gallery = () => {
                             <a href={item.link} target="_blank" rel="noopener noreferrer" className="item-view-btn">VIEW</a>
                         </div>
                     ))}
+
+                    {/* View All Gallery Card */}
+                    <Link to="/gallery" className="modern-gallery-item view-all-gallery-card">
+                        <div className="item-icon"><FaArrowRight /></div>
+                        <div className="item-content">
+                            <h3 className="item-title">VIEW FULL GALLERY</h3>
+                            <span className="item-rank">More Achievements & Certificates</span>
+                        </div>
+                        <span className="item-view-btn">OPEN</span>
+                    </Link>
                 </div>
             </div>
         </section>
