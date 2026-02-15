@@ -7,6 +7,7 @@ import Works from './components/Works';
 import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import WorksPage from './pages/WorksPage';
+import GalleryPage from './pages/GalleryPage';
 
 function App() {
   return (
@@ -26,6 +27,9 @@ function App() {
 
         {/* Works Page */}
         <Route path="/works" element={<WorksPage />} />
+
+        {/* Gallery Page */}
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
     </Router>
   );
