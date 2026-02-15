@@ -9,9 +9,28 @@ import Contact from './components/Contact';
 import WorksPage from './pages/WorksPage';
 import GalleryPage from './pages/GalleryPage';
 
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function ScrollToHash() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <Routes>
         {/* Home Page */}
         <Route path="/" element={
