@@ -50,7 +50,23 @@ const Navbar = () => {
                 </div>
                 <div className="nav-links-wrapper">
                     {navLinks.map((link, index) => (
-                        <a key={index} href={link.href} className="nav-link-pill">
+                        <a
+                            key={index}
+                            href={link.href}
+                            className="nav-link-pill"
+                            onClick={(e) => {
+                                if (isHomePage) {
+                                    e.preventDefault();
+                                    const element = document.querySelector(link.href.substring(1));
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                        // Update URL without jump
+                                        window.history.pushState(null, '', link.href);
+                                    }
+                                }
+                                // If not home page, let the default behavior happen (navigate to /#section)
+                            }}
+                        >
                             {link.name}
                         </a>
                     ))}
