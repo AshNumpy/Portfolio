@@ -23,8 +23,8 @@ const Navbar = () => {
 
     const navLinks = [
         { name: "About", href: "/#about", type: "hash" },
-        { name: "Works", href: "/works", type: "page" },
-        { name: "Gallery", href: "/gallery", type: "page" },
+        { name: "Works", href: "/#works", type: "hash" },
+        { name: "Gallery", href: "/#gallery", type: "hash" },
         { name: "Contact", href: "/#contact", type: "hash" },
     ];
 
