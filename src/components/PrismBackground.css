@@ -1,0 +1,23 @@
+.prism-background {
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+#prism-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 768px) {
+    .prism-background {
+        width: 100%;
+        height: 500px;
+        top: 80px;
+    }
+}
