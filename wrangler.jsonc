@@ -2,6 +2,9 @@
   "name": "website",
   "compatibility_date": "2026-02-16",
   "assets": {
-    "directory": "./dist"
+    "directory": "./dist",
+    "not_found_handling": {
+      "serve_body": "/index.html"
+    }
   }
 }
