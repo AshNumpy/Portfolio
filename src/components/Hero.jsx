@@ -1,12 +1,14 @@
 import React from 'react';
 import { cvData } from '../data/cvData';
 import { FaLinkedin, FaGithub, FaMedium, FaArrowDown } from 'react-icons/fa';
+import PrismBackground from './PrismBackground';
 import './Hero.css';
 
 const Hero = () => {
     return (
         <section className="hero-section">
             <div className="hero-container">
+                <PrismBackground />
                 {/* Main Title at the top */}
                 <div className="hero-title-wrapper-v4">
                     <h1 className="hero-full-width-title">Ramazan Erduran</h1>
