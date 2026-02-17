@@ -95,7 +95,7 @@
     flex-direction: column;
     gap: 1.5rem;
     max-width: 420px;
-    transform: translate(90px, -340px);
+    transform: translate(90px, -240px);
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
@@ -145,7 +145,7 @@
 
 .hero-desc-group-v6:hover {
     background: rgba(255, 255, 255, 0.1);
-    transform: translate(90px, -350px) scale(1.02);
+    transform: translate(90px, -250px) scale(1.02);
     box-shadow:
         0 12px 40px rgba(0, 0, 0, 0.2),
         inset 0 1px 0 rgba(255, 255, 255, 0.2),
