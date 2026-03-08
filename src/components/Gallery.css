@@ -88,3 +88,25 @@
         font-size: 4rem;
     }
 }
+
+[data-theme="light"] .modern-gallery-item {
+    background: var(--primary-100);
+    border-color: var(--bg-200);
+}
+
+[data-theme="light"] .item-title {
+    color: #FFFFFF;
+}
+
+[data-theme="light"] .item-icon {
+    color: #FFFFFF;
+}
+
+[data-theme="light"] .item-rank {
+    color: #FFFFFF;
+}
+
+[data-theme="light"] .item-view-btn {
+    background: #FFFFFF;
+    color: var(--primary-100);
+}

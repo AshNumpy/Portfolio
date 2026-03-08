@@ -14,7 +14,6 @@
 
 .navbar.scrolled {
     background: rgba(209, 230, 79, 0.95);
-    /* Semi-transparent lime on scroll */
     backdrop-filter: blur(10px);
     height: 80px;
 }
@@ -124,4 +123,71 @@
         font-size: 0.75rem;
         padding: 0.5rem 0.8rem;
     }
+
+    .theme-toggle {
+        font-size: 1.2rem;
+        padding: 0.5rem;
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 4rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+    z-index: 1001;
+    color: var(--bg-100);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.navbar.light .nav-logo,
+.navbar.light .nav-link-pill {
+    color: #FFFFFF;
+}
+
+.navbar.light .theme-toggle {
+    color: #FFFFFF;
+}
+
+.navbar.scrolled.light .theme-toggle {
+    color: var(--primary-100);
+}
+
+.navbar.light .nav-link-pill:hover,
+.navbar.light .nav-link-pill.active {
+    background-color: #FFFFFF;
+    color: var(--primary-100);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar.scrolled.light .nav-link-pill:hover,
+.navbar.scrolled.light .nav-link-pill.active {
+    background-color: var(--text-100);
+    color: #FFFFFF;
+}
+
+.navbar.scrolled.light {
+    background: rgba(245, 247, 240, 0.95);
+}
+
+.navbar.scrolled.light .nav-logo {
+    color: var(--primary-100);
+}
+
+.navbar.scrolled.light .nav-link-pill {
+    color: var(--primary-100);
+}
+
+.navbar.scrolled.light .nav-link-pill:hover,
+.navbar.scrolled.light .nav-link-pill.active {
+    background-color: var(--primary-100);
+    color: #FFFFFF;
 }

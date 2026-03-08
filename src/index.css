@@ -1,21 +1,17 @@
 :root {
-    /* Color Palette - Reference Inspired */
+    /* Dark Theme (Default) */
     --primary-100: #D1E64F;
-    /* Neon/Lime Green */
     --primary-200: #b8cc45;
     --bg-100: #1A2416;
-    /* Dark Forest/Green Black */
     --bg-200: #252e21;
     --bg-300: #343d31;
     --text-100: #FFFFFF;
     --text-200: #d0d0d0;
     --accent-100: #D1E64F;
-    /* Matching primary for this theme */
 
     /* Typography */
     --font-main: 'Inter', sans-serif;
     --font-header: 'Oswald', sans-serif;
-    /* Big bold headers */
 
     /* Spacing */
     --spacing-xs: 0.5rem;
@@ -27,6 +23,17 @@
     /* Transitions */
     --transition-fast: 0.2s ease;
     --transition-normal: 0.4s ease;
+}
+
+[data-theme="light"] {
+    --primary-100: #1A2416;
+    --primary-200: #252e21;
+    --bg-100: #F5F7F0;
+    --bg-200: #E8EBE0;
+    --bg-300: #D8DDCE;
+    --text-100: #1A2416;
+    --text-200: #3D4A38;
+    --accent-100: #1A2416;
 }
 
 /* Reset */

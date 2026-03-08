@@ -162,9 +162,6 @@
     color: var(--bg-100);
     border: 1px solid var(--primary-100);
     transform: translateY(-3px);
-    /* Kept original hover effect */
-    box-shadow: 0 10px 30px rgba(184, 255, 54, 0.3);
-    /* Kept original hover effect */
 }
 
 .view-all-btn:hover::before {
