@@ -8,6 +8,7 @@ import Gallery from './components/Gallery';
 import Contact from './components/Contact';
 import WorksPage from './pages/WorksPage';
 import GalleryPage from './pages/GalleryPage';
+import { ThemeProvider } from './context/ThemeContext';
 
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
@@ -29,28 +30,30 @@ function ScrollToHash() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToHash />
-      <Routes>
-        {/* Home Page */}
-        <Route path="/" element={
-          <div className="app">
-            <Navbar />
-            <Hero />
-            <About />
-            <Works />
-            <Gallery />
-            <Contact />
-          </div>
-        } />
+    <ThemeProvider>
+      <Router>
+        <ScrollToHash />
+        <Routes>
+          {/* Home Page */}
+          <Route path="/" element={
+            <div className="app">
+              <Navbar />
+              <Hero />
+              <About />
+              <Works />
+              <Gallery />
+              <Contact />
+            </div>
+          } />
 
-        {/* Works Page */}
-        <Route path="/works" element={<WorksPage />} />
+          {/* Works Page */}
+          <Route path="/works" element={<WorksPage />} />
 
-        {/* Gallery Page */}
-        <Route path="/gallery" element={<GalleryPage />} />
-      </Routes>
-    </Router>
+          {/* Gallery Page */}
+          <Route path="/gallery" element={<GalleryPage />} />
+        </Routes>
+      </Router>
+    </ThemeProvider>
   );
 }
 
