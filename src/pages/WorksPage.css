@@ -184,6 +184,10 @@
     color: var(--primary-100);
 }
 
+[data-theme="light"] .project-card::after {
+    background: linear-gradient(135deg, rgba(209, 220, 194, 0.82) 0%, rgba(235, 238, 228, 0.8) 100%);
+}
+
 @media (max-width: 1024px) {
     .projects-grid {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
