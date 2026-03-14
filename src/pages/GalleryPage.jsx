@@ -1,14 +1,53 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import { FaArrowLeft, FaTrophy, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
-import { galleryData } from '../data/galleryData';
+import { fetchAchievements, fetchCertificates } from '../services/cmsApi';
 import './GalleryPage.css';
 
 const GalleryPage = () => {
+    const [achievements, setAchievements] = useState([]);
+    const [certificates, setCertificates] = useState([]);
+    const [loading, setLoading] = useState(true);
+
     useEffect(() => {
+        const loadData = async () => {
+            try {
+                const [achievementsData, certificatesData] = await Promise.all([
+                    fetchAchievements(),
+                    fetchCertificates()
+                ]);
+                
+                const sortedAchievements = [...achievementsData].sort((a, b) => new Date(b.date) - new Date(a.date));
+                const sortedCertificates = [...certificatesData].sort((a, b) => new Date(b.date) - new Date(a.date));
+                
+                setAchievements(sortedAchievements);
+                setCertificates(sortedCertificates);
+            } catch (err) {
+                console.error('Failed to load gallery:', err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadData();
         window.scrollTo(0, 0);
     }, []);
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString);
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return date.toLocaleDateString('en-US', options);
+    };
+
+    const certificatesByIssuer = certificates.reduce((acc, cert) => {
+        const issuer = cert.header;
+        if (!acc[issuer]) {
+            acc[issuer] = [];
+        }
+        acc[issuer].push(cert);
+        return acc;
+    }, {});
 
     return (
         <div className="gallery-page">
@@ -36,15 +75,15 @@ const GalleryPage = () => {
                     </div>
 
                     <div className="achievements-grid">
-                        {galleryData.achievements.map((item, index) => (
-                            <div key={index} className="achievement-card">
+                        {achievements.map((item, index) => (
+                            <div key={item.id || index} className="achievement-card">
                                 <div className="achievement-header">
-                                    <span className="achievement-date">{item.date}</span>
+                                    <span className="achievement-date">{formatDate(item.date)}</span>
                                     <span className="achievement-rank">#{item.rank}</span>
                                 </div>
-                                <h3 className="achievement-title">{item.title}</h3>
+                                <h3 className="achievement-title">{item.header}</h3>
                                 <div className="achievement-details">
-                                    <span>Top {item.rank} of {item.competitors} participants</span>
+                                    <span>{item.description}</span>
                                 </div>
                                 <div className="achievement-actions">
                                     <a
@@ -55,14 +94,14 @@ const GalleryPage = () => {
                                     >
                                         View details <FaExternalLinkAlt />
                                     </a>
-                                    {item.presentation && (
+                                    {item.specialLink && (
                                         <a
-                                            href={item.presentation}
+                                            href={item.specialLink}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="achievement-link presentation-link"
                                         >
-                                            Presentation <FaExternalLinkAlt />
+                                            {item.specialLinkHeader || 'Presentation'} <FaExternalLinkAlt />
                                         </a>
                                     )}
                                 </div>
@@ -79,19 +118,19 @@ const GalleryPage = () => {
                     </div>
 
                     <div className="certificates-container">
-                        {galleryData.certificates.map((issuer, index) => (
-                            <div key={index} className="certificate-group">
-                                <h3 className="issuer-title">{issuer.issuer}</h3>
+                        {Object.entries(certificatesByIssuer).map(([issuer, certs]) => (
+                            <div key={issuer} className="certificate-group">
+                                <h3 className="issuer-title">{issuer}</h3>
                                 <div className="certificates-list">
-                                    {issuer.items.map((cert, certIndex) => (
+                                    {certs.map((cert, index) => (
                                         <a
-                                            key={certIndex}
+                                            key={cert.id || index}
                                             href={cert.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             className="certificate-item"
                                         >
-                                            <span className="cert-name">{cert.name}</span>
+                                            <span className="cert-name">{cert.description}</span>
                                             <FaExternalLinkAlt className="cert-icon" />
                                         </a>
                                     ))}
