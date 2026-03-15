@@ -1,69 +1,86 @@
+<h2> 👻 &nbsp; About Me</h2>
+
+```python
+name = "Ramazan Erduran"
+located_in =  "Turkey"
+current_field = "Data & Analytics"
+
+
+education = {
+  "University":"Hacettepe University",
+  "Department": "Statistics",
+  "GPA": 3.12
+}
+
+
+fields_of_interests = [
+  "Statistics",
+  "Machine Learning & AI",
+  "Business Anlytics",
+  "Data Visualization",
+  "Insight Consulting"
+  ]
+
+
+technical_background = [
+  "Full Time - Business Intelligence Consultant"
+  "Full Time - Data Scientist",
+  "Intern - Data Science and Machine Learning"
+]
+  
+currently_learning = ["System Design"]
+
+
+hobbies = [
+  "Movie",
+  "Theatre",
+  "Guitar",
+  "Comedy",
+  "Boxing"
+  ]
+```
+  
+---  
+  
+<h2> 🛠️ &nbsp;Some Tools I Have Used and Learned</h2>
+
+
+![Qlik Badge](https://img.shields.io/badge/Qlik-%23009848?style=for-the-badge&logo=qlik&logoColor=white)
+![Tableau](https://img.shields.io/badge/Tableau-Purple?style=for-the-badge&logo=tableau&logoColor=white)
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078D4?style=for-the-badge&logo=Visual%20Studio&logoColor=white&height=50)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter%20Notebook-F37626?style=for-the-badge&logo=Jupyter&logoColor=white&height=50)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white&height=50)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=NumPy&logoColor=white&height=50)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white&height=50)
+![Plotly](https://img.shields.io/badge/Plotly-3D4D71?style=for-the-badge&logo=Plotly&logoColor=white&height=50)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white&height=50)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=TensorFlow&logoColor=white&height=50)
+![Playwright](https://img.shields.io/badge/Playwright-2EAD33?style=for-the-badge&logo=Playwright&logoColor=white&height=50)
+![PySpark](https://img.shields.io/badge/PySpark-E25A1C?style=for-the-badge&logo=Apache%20Spark&logoColor=white&height=50)
+![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=R&logoColor=white&height=50)
+![KNIME](https://img.shields.io/badge/KNIME-FDDA28?style=for-the-badge&logo=KNIME&logoColor=white&height=50)
+![RStudio](https://img.shields.io/badge/RStudio-75AADB?style=for-the-badge&logo=R&logoColor=white&height=50)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white&height=50)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=MySQL&logoColor=white&height=50)
+![MS SQL Server](https://img.shields.io/badge/MSSQL-CC2927?style=for-the-badge&logo=Microsoft%20SQL%20Server&logoColor=white&height=50)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=PostgreSQL&logoColor=white&height=50)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=Linux&logoColor=white&height=50)
+![Markdown](https://img.shields.io/badge/Markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white&height=50)
+
+
+---
+
+
 <h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=45&pause=500&color=c8dc4c&center=true&vCenter=true&width=900&lines=Merhaba!+%F0%9F%91%8B;I'm+Ramazan" alt="Typing SVG" />
+  Let's Connect and have a Chat!
 </h1>
 
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=3388FF&center=true&vCenter=true&width=900&lines=Business+Intelligence+%7C+Data+Science+%7C+Statistics" alt="Typing SVG" />
-  </a>
-</p>
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=AshNumpy&label=Profile%20Views&color=0e75b6&style=flat" alt="profile views" />
-  <img src="https://img.shields.io/github/followers/AshNumpy?style=social" alt="followers" />
+    <a href="https://www.linkedin.com/in/ramazan-erduran/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+    <a href="https://medium.com/@ashnumpy/" target="_blank"><img src="https://img.shields.io/badge/Website-%2312100E.svg?style=for-the-badge&logo=ruff&logoColor=white" alt="Personal Website"></a>
+    <a href="mailto:ramazan.erduran@outlook.com.tr" target="_blank"><img src="https://img.shields.io/badge/Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" alt="Mail"></a>
 </p>
 
----
-
-<h2 align="center">⚡ Hakkımda</h2>
-
-<p align="center">
-  Ben <strong>Ramazan</strong>, Ankara'da yaşayan bir <strong>Veri Bilimci</strong> ve <strong>İş Zekası Geliştiricisiyim</strong>. İstatistik ve veri analizi alanında güçlü bir geçmişe sahibim. Karmaşık veri setlerini anlamlı içgörülere dönüştürmek, makine öğrenmesi modelleri geliştirmek ve veri odaklı çözümler üretmek benim tutkum.
-</p>
-
-<p align="center">
-  🎓 <strong>Hacettepe Üniversitesi</strong> - İstatistik Bölümü<br>
-  💡 İlgi Alanları: Komedi, Kutu Oyunları, Veri Görselleştirme, İstatistiksel Analiz<br>
-</p>
-
-
-<h2 align="center">📊 GitHub İstatistikleri</h2>
-<div align="center">
-  <img alt="AshNumpy's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=AshNumpy&theme=tokyonight&hide_border=true&background=0d1117" />
-</div>
-
----
-
-<h2 align="center">🚀 Projeler</h2>
-
-| Proje | Açıklama | Teknolojiler | Bağlantı |
-|-------|----------|--------------|----------|
-| **Sales Analysis ML** | Satış verilerinin makine öğrenmesi ile analizi ve tahmini | Python, Scikit-learn, Streamlit | [GitHub](https://github.com/AshNumpy/Sales-End-to-End-ML-Project) |
-| **Sleep Health Analysis** | Sağlık ve yaşam tarzı verilerinin makine öğrenmesi ile analizi | Python, Pandas, ML | [GitHub](https://github.com/AshNumpy/Sleep-Health-ML-Project) |
-| **Customer Churn Prediction** | Müşteri kaybı tahmini için sinir ağı modeli | TensorFlow, Neural Networks | [GitHub](https://github.com/AshNumpy) |
-| **Categorical Data Analysis** | Kategorik veri analizi projesi | R, İstatistik | [GitHub](https://github.com/AshNumpy/Categorical-Data-Analysis) |
-
-> [Tüm projeleri görüntüle →](https://github.com/AshNumpy?tab=repositories)
-
----
-
-<h2 align="center">📫 İletişim</h2>
-
-<p align="center">
-  <a href="https://linkedin.com/in/ramazan-erduran" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="linkedin" />
-  </a>
-  <a href="mailto:ramazan@outlook.com.tr" target="_blank">
-    <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="email" />
-  </a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,4,6&height=180&section=footer&animation=fadeIn&fontAlignY=45" alt="footer" />
-</p>
-
-<p align="center">
-  <sub>⭐⭐⭐ Bu projeyi beğendiyseniz, yıldız vermeyi unutmayın!</sub>
-</p>
+<p align="center"></p>
