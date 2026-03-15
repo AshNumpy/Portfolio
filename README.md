@@ -1,24 +1,12 @@
-<h1 align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=45&pause=500&color=c8dc4c&center=true&vCenter=true&width=900&lines=Merhaba!+%F0%9F%91%8B;I'm+Ramazan" alt="Typing SVG" />
-</h1>
-
-<p align="center">
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=20&pause=1000&color=3388FF&center=true&vCenter=true&width=900&lines=Business+Intelligence+%7C+Data+Science+%7C+Statistics" alt="Typing SVG" />
-  </a>
-</p>
-
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=AshNumpy&label=Profile%20Views&color=0e75b6&style=flat" alt="profile views" />
   <img src="https://img.shields.io/github/followers/AshNumpy?style=social" alt="followers" />
 </p>
 
----
-
 <h2 align="center">⚡ Hakkımda</h2>
 
 <p align="center">
-  Ben <strong>Ramazan</strong>, Ankara'da yaşayan bir <strong>Veri Bilimci</strong> ve <strong>İş Zekası Geliştiricisiyim</strong>. İstatistik ve veri analizi alanında güçlü bir geçmişe sahibim. Karmaşık veri setlerini anlamlı içgörülere dönüştürmek, makine öğrenmesi modelleri geliştirmek ve veri odaklı çözümler üretmek benim tutkum.
+  Ben <strong>Ramazan</strong>, Ankara'da yaşayan bir <strong>Veri Bilimci</strong> ve <strong>İş Zekası Geliştiricisiyim</strong>. Karmaşık veri setlerini anlamlı içgörülere dönüştürmek, makine öğrenmesi modelleri geliştirmek ve veri odaklı çözümler üretmek benim tutkum.
 </p>
 
 <p align="center">
@@ -29,7 +17,7 @@
 
 <h2 align="center">📊 GitHub İstatistikleri</h2>
 <div align="center">
-  <img alt="AshNumpy's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=AshNumpy&theme=tokyonight&hide_border=true&background=0d1117" />
+  <img alt="AshNumpy's Github Streak" src="https://github-readme-streak-stats.herokuapp.com/?user=AshNumpy&theme=dark&hide_border=true&background=0d1117" />
 </div>
 
 ---
@@ -53,17 +41,7 @@
   <a href="https://linkedin.com/in/ramazan-erduran" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white" alt="linkedin" />
   </a>
-  <a href="mailto:ramazan@outlook.com.tr" target="_blank">
+  <a href="mailto:ramazan.erduran@outlook.com.tr" target="_blank">
     <img src="https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white" alt="email" />
   </a>
-</p>
-
----
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,4,6&height=180&section=footer&animation=fadeIn&fontAlignY=45" alt="footer" />
-</p>
-
-<p align="center">
-  <sub>⭐⭐⭐ Bu projeyi beğendiyseniz, yıldız vermeyi unutmayın!</sub>
 </p>
