@@ -1,0 +1,28 @@
+name: "Conflict Awareness"
+
+on:
+  push:
+    branches-ignore: [main] # Sadece feature branchlerde çalışır
+
+jobs:
+  check-conflicts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Tüm geçmişi çekmek zorunlu
+
+      - name: Check for Merge Conflicts with Main
+        run: |
+          git fetch origin main
+          echo "Main branch ile simülasyon birleştirmesi yapılıyor..."
+          
+          # Main'i geçici olarak senin branchine merge etmeye çalış (diske yazmadan)
+          if ! git merge origin/main --no-commit --no-ff; then
+            echo "::error title=Conflict Detected::DİKKAT! Main branch ile çakışma var. Arkadaşın senden önce davranmış. Lütfen yerelde 'git pull origin main' yapıp çakışmayı çözün!"
+            exit 1
+          else
+            echo "Tertemiz! Şu an main ile tam uyumlusun."
+            git merge --abort # Denemeyi iptal et
+          fi
