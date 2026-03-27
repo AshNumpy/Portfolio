@@ -26,6 +26,7 @@ export const fetchProjectsWithImages = async () => {
     link: project.Link,
     specialLink: project.LinkSpecial,
     tag: project.Tag ? project.Tag[0] : null,
+    tags: project.Tag || [],
     date: project.Date,
     thumbnail: fetchProjectImageUrl(project.Thumbnail)
   }));

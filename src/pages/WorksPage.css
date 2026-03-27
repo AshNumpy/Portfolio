@@ -3,6 +3,29 @@
     background-color: var(--bg-100);
 }
 
+.works-page::-webkit-scrollbar,
+.modal-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.works-page::-webkit-scrollbar-track,
+.modal-body::-webkit-scrollbar-track {
+    background: var(--bg-200);
+    border-radius: 4px;
+}
+
+.works-page::-webkit-scrollbar-thumb,
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--primary-100);
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
+.works-page::-webkit-scrollbar-thumb:hover,
+.modal-body::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-200);
+}
+
 .works-page-hero {
     padding: 12rem 0 6rem;
     background: linear-gradient(135deg, var(--bg-100) 0%, var(--bg-200) 100%);
@@ -197,6 +220,7 @@
     font-size: 0.9rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    cursor: pointer;
 }
 
 .project-link:hover {
@@ -215,6 +239,279 @@
 .project-link-demo:hover {
     background: transparent;
     color: var(--primary-100);
+}
+
+.project-link-details {
+    background: transparent;
+}
+
+.project-link-details:hover {
+    background: var(--primary-100);
+    color: var(--bg-100);
+    border-color: var(--primary-100);
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 2rem;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background: var(--bg-100);
+    border-radius: 16px;
+    max-width: 800px;
+    width: 100%;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.3s ease;
+    border: 2px solid var(--primary-100);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem 2rem;
+    border-bottom: 2px solid var(--primary-100);
+    background: var(--bg-200);
+}
+
+.modal-header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.modal-header h2 {
+    font-size: 1.5rem;
+    color: var(--text-100);
+    margin: 0;
+    font-weight: 700;
+}
+
+.modal-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.modal-tag {
+    font-size: 0.75rem;
+    color: var(--primary-100);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(184, 255, 54, 0.1);
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+}
+
+.modal-thumbnail {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-300);
+    border-bottom: 1px solid var(--bg-300);
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    color: var(--text-200);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    color: var(--primary-100);
+    transform: scale(1.1);
+}
+
+.modal-body {
+    padding: 2rem;
+    overflow-y: auto;
+    flex: 1;
+    background: var(--bg-100);
+}
+
+.markdown-renderer {
+    color: var(--text-100);
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+.markdown-renderer h1,
+.markdown-renderer h2,
+.markdown-renderer h3,
+.markdown-renderer h4,
+.markdown-renderer h5,
+.markdown-renderer h6 {
+    color: var(--text-100);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.markdown-renderer h1 { font-size: 2rem; }
+.markdown-renderer h2 { font-size: 1.75rem; }
+.markdown-renderer h3 { font-size: 1.5rem; }
+.markdown-renderer h4 { font-size: 1.25rem; }
+.markdown-renderer h5 { font-size: 1.1rem; }
+.markdown-renderer h6 { font-size: 1rem; }
+
+.markdown-renderer p {
+    margin-bottom: 1rem;
+}
+
+.markdown-renderer p:last-child {
+    margin-bottom: 0;
+}
+
+.markdown-renderer code {
+    background: var(--bg-200);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+.markdown-renderer .code-block {
+    background: var(--bg-200);
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--primary-100);
+}
+
+.markdown-renderer .code-block code {
+    background: transparent;
+    padding: 0;
+}
+
+.markdown-renderer ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: disc;
+}
+
+.markdown-renderer ul li {
+    margin-bottom: 0.5rem;
+}
+
+.markdown-renderer a {
+    color: var(--primary-100);
+    text-decoration: none;
+}
+
+.markdown-renderer a:hover {
+    text-decoration: underline;
+}
+
+.markdown-renderer strong {
+    font-weight: 700;
+    color: var(--text-100);
+}
+
+.markdown-renderer em {
+    font-style: italic;
+}
+
+.markdown-renderer .table-row {
+    display: flex;
+    border-bottom: 1px solid var(--bg-300);
+    padding: 0.5rem 0;
+}
+
+.markdown-renderer .table-cell {
+    flex: 1;
+    padding: 0 0.5rem;
+}
+
+.modal-footer {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-contact-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.8rem 2rem;
+    background: var(--primary-100);
+    color: var(--bg-100);
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.modal-contact-btn:hover {
+    background: var(--primary-200);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(209, 230, 79, 0.3);
+}
+
+.modal-contact-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.modal-contact-btn:hover svg {
+    transform: translateX(3px);
+}
+
+.markdown-renderer .markdown-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-100), transparent);
+    margin: 1.5rem 0;
+}
+
+[data-theme="light"] .modal-backdrop {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+[data-theme="light"] .markdown-renderer code,
+[data-theme="light"] .markdown-renderer .code-block {
+    background: var(--bg-300);
+}
+
+[data-theme="light"] .modal-close {
+    color: var(--text-300);
 }
 
 [data-theme="light"] .project-card::after {
