@@ -304,7 +304,7 @@ const WorksPage = () => {
                 {!loading && !error && (
                     <div className="projects-grid">
                         {projects.map((project, index) => (
-                            <div key={project.id || index} className="project-card" style={{ backgroundImage: getProjectImage(project) }}>
+                            <div key={project.id || index} id={`project-${project.id}`} className="project-card" style={{ backgroundImage: getProjectImage(project) }}>
                                 <div className="project-card-header">
                                     <span className="project-category">{project.tag}</span>
                                     <span className="project-date">{formatDate(project.date)}</span>
