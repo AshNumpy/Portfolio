@@ -42,7 +42,7 @@ const Works = () => {
                                 <h3 className="work-name-v2">{proj.header.toUpperCase()}</h3>
                                 <p className="work-tag-v2">{proj.description.substring(0, 100)}...</p>
                             </div>
-                            <Link to={`/works#project-${proj.id}`} className="work-btn-v2">
+                            <Link to="/works" className="work-btn-v2">
                                 Explore <span className="arrow-icon"><FaArrowRight /></span>
                             </Link>
                         </div>
